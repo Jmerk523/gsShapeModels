@@ -69,6 +69,7 @@
     <Compile Include="operators\CutPolygonHoleOp.cs" />
     <Compile Include="operators\GenerateClosedMeshOp.cs" />
     <Compile Include="operators\MeshAutoRepairOp.cs" />
+    <Compile Include="operators\MeshHollowOp.cs" />
     <Compile Include="operators\MeshMorphologyOp.cs" />
     <Compile Include="operators\MeshShellOp.cs" />
     <Compile Include="operators\MeshVoxelBlendOp.cs" />
@@ -95,16 +96,20 @@
   </ItemGroup>
   <ItemGroup>
     <!-- <ProjectReference Include="..\geometry3Sharp\geometry3Sharp.csproj"> -->
-      <!-- <Project>{0c518dda-28fe-44ca-9ab0-f9773974f13a}</Project> -->
-      <!-- <Name>geometry3Sharp</Name> -->
+    <!-- <Project>{0c518dda-28fe-44ca-9ab0-f9773974f13a}</Project> -->
+    <!-- <Name>geometry3Sharp</Name> -->
     <!-- </ProjectReference> -->
-    <PackageReference Include="geometry3Sharp">
-      <Version>1.0.289</Version>
-    </PackageReference>
+    <ProjectReference Include="..\geometry3Sharp\geometry3Sharp.csproj">
+      <Project>{0c518dda-28fe-44ca-9ab0-f9773974f13a}</Project>
+      <Name>geometry3Sharp</Name>
+    </ProjectReference>
     <ProjectReference Include="..\gsGeometry\gsGeometry.csproj">
       <Project>{c5b9d744-2fc5-4810-bd85-78fb73fb1e8d}</Project>
       <Name>gsGeometry</Name>
     </ProjectReference>
+    <PackageReference Include="UnityEngine">
+      <Version>2.0.1</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="meshop_nodes\" />
